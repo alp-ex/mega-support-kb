@@ -18,7 +18,7 @@ report bodies add a third problem. Each problem below has its own ticket, so a f
 close the others.
 
 <Callout kind="warn">
-Fixing the parser does not fix the booking-v3 hint, and neither fix touches the one-day moves.
+Engineering closed #4471 on 5 October: the parser is fixed and the booking-v3 form is retired. Neither change touches the one-day moves, so that ticket stays open.
 </Callout>
 
 ## What #4471 holds

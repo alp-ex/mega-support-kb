@@ -27,7 +27,7 @@
 
 <table>
   <thead>
-    <tr><th>problem</th><th>reports</th><th>ticket</th><th>tenants</th><th>came in by</th><th>intake tagged</th><th>seen</th></tr>
+    <tr><th>problem</th><th>reports</th><th>ticket</th><th>state</th><th>tenants</th><th>came in by</th><th>intake tagged</th><th>seen</th></tr>
   </thead>
   <tbody>
     {#each groups as g (g.problem)}
@@ -36,6 +36,7 @@
         <td><code>{g.problem}</code></td>
         <td><strong>{g.reports.length}</strong></td>
         <td>{#if t}<a href="{TICKET_REPO}/issues/{t.issue}">#{t.issue}</a> {t.title}{:else}none yet{/if}</td>
+        <td class="small">{#if t}<strong class:open={t.state === 'open'}>{t.state}</strong>: {t.why}{/if}</td>
         <td>{g.tenants.length}</td>
         <td class="small">{list(g.channels)}</td>
         <td class="small">{list(g.taggedAs)}</td>
@@ -48,4 +49,5 @@
 <style>
   .sum { font-size: 1.05rem; }
   .small { color: var(--muted); font-size: 0.85em; }
+  .open { color: var(--warn); }
 </style>
