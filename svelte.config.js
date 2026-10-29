@@ -6,7 +6,7 @@ export default {
   extensions: ['.svelte', '.svx'],
   preprocess: [mdsvex({ extensions: ['.svx'], layout: { runbook: fileURLToPath(new URL('./src/lib/layouts/runbook.svelte', import.meta.url)) } })],
   kit: {
-    adapter: adapter(),
+    adapter: adapter({ pages: 'docs', assets: 'docs' }),
     alias: { '#lib': 'src/lib' },
     prerender: { entries: ['*'] },
   },

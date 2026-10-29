@@ -34,3 +34,7 @@ Support desk. Decision records: whoever signed them.
 ---
 
 Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
+
+## Building
+
+`npm install && npm run build` renders every page to `docs/`, which GitHub Pages serves. The rendered pages are committed, so `docs/kb/incidents/4471-split.html` is the page as the desk sees it.
